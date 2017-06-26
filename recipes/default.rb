@@ -1,4 +1,4 @@
-# include_recipe 'docker_compose::installation'
+include_recipe 'docker_compose::installation'
 
 cookbook_file '/etc/docker-compose_renderer.yml' do
   source 'docker-compose_renderer.yml'
