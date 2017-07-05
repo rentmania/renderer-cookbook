@@ -5,8 +5,6 @@ services:
     restart: always
     mem_limit: 500m
     cpuset: '1'
-    ports:
-      - 9222:9222
   renderer:
     image: pandamako/renderer
     restart: always
