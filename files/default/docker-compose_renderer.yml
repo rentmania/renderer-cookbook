@@ -3,14 +3,14 @@ services:
   chrome:
     image: yukinying/chrome-headless
     restart: always
-    mem_limit: 1g
-    cpuset: '1'
   renderer:
     image: pandamako/renderer
     restart: always
     mem_limit: 100m
     environment:
       CHROME_HOST: chrome
+      USER_AGENT: 'rentmania-renderer'
+      CONCURRENCY: 32
     ports:
       - 8887:8000
     depends_on:
